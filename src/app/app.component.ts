@@ -1,4 +1,5 @@
 import { Component,OnInit } from '@angular/core';
+import { Data } from '@angular/router';
 import { NasaServiceService } from './nasa-service.service';
 
 @Component({
@@ -7,21 +8,21 @@ import { NasaServiceService } from './nasa-service.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit{
-  public title:string[] =[];
-  private service:NasaServiceService;
+  public title:Data[]=[];
 
-  constructor(param_service:NasaServiceService){
-    this.service = param_service;
+
+  constructor(private nasa:NasaServiceService){
+    
+    this.nasa.getNasa().subscribe(data=>{
+    this.title.push(data);
+    console.log(this.title)
+   })
   }
 
 
-ngOnInit():void{
-  this.service.getIMageofTheDay().subscribe(
-    (param_msg:string)=>{
-      this.title[""] = param_msg;
-    }
-  );
+ngOnInit():void{}
+    
 }
   
   
-}
+
