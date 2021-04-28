@@ -4,7 +4,7 @@ section{
     justify-content: center;
     align-items: center;
     background-color: aliceblue;
-    height: 1000px;
+    height: 100%;
 }
 
 h1{
@@ -15,4 +15,8 @@ h1{
 .resume{
     text-align: center;
     background-color:beige;
+}
+
+.imageNasa{
+    height: 50%;
 }
