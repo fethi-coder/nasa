@@ -1,9 +1,11 @@
 <section *ngFor="let a of title">
   <h1>{{a.title}}</h1>
   <img class="imageNasa" [src]="a.url" alt="image Nasa">
+  <p>{{a.copyright}}</p>
   <p>{{a.url}}</p>
+  <p>{{a.hdurl}}</p>
   <p class="resume">{{a.explanation}}</p>
   <video class="video-fluid z-depth-1" autoplay loop controls muted>
     <source [src]="a.url" type="video/mp4"/>
-</video>
+   </video>
 </section>

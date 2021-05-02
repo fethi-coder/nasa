@@ -3,8 +3,8 @@ section{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: aliceblue;
-    height: 100%;
+    background-color: rgb(100, 131, 158);
+    height: 1500px;
 }
 
 h1{
@@ -13,10 +13,20 @@ h1{
 }
 
 .resume{
+    width: 700px;
+    display: block;
     text-align: center;
     background-color:beige;
 }
 
 .imageNasa{
+    cursor: pointer;
     height: 50%;
+    width: auto;
+    transition: 0.4s all;
+}
+
+.imageNasa:hover{
+    transform: translateX(10%);
+    zoom: 100%;
 }
